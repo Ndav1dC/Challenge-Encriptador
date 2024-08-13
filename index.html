@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <title>Encriptador</title>
+</head>
+
+<body>
+  <main>
+    <section class="cuerpo_pagina">
+      <header>
+        <img src="imgs/LogoA.png" alt="Logo Alura" />
+      </header>
+
+      <div class="container__left">
+        <textarea name="containertext" id="container__text" cols="30" rows="10" placeholder="¡INGRESE UN TEXTO, POR FAVOR!"
+          onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)"
+          min=1></textarea>
+
+        <div class="container_botones_encriptar_desencriptar">
+          <div class="texto__guia">
+            <img src="imgs/Vector.png" alt="Icono de alerta" />
+            <label>Solo letras minúsculas y sin acentos</label>
+          </div>
+
+          <div class="style_botones_encriptar_desencriptar">
+            <button id="boton_encriptar" onclick="encriptarBtn()">Encriptar</button>
+            <button id="boton_desencriptar" onclick="desencriptarBtn()">Desencriptar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__2">
+      <div class="container__right">
+        <div class="img__muneco">
+          <img src="imgs/Muñeco.png" alt="muñeco" />
+        </div>
+        <p id="text_1">Ningún mensaje fue encontrado</p>
+        <p id="text_2">Ingresa el texto que desees encriptar o desencriptar.</p>
+        
+        <div class="ocultar">
+          <p class="text__result"></p>
+        </div>
+        <div class="ocultar">
+          <button id="btn__copy" >Copiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="./assets/script.js"></script>
+
+</html>
